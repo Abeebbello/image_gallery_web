@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themed Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Homepage -->
+  <div id="homepage">
+    <header>
+      <h1> Explore My Gallery Themes </h1>
+    </header>
+
+    <div class="categories">
+      <div class="category" onclick="openGallery('nature')">
+        <img src="https://picsum.photos/id/1018/400/300" alt="Nature">
+        <h2>Nature</h2>
+      </div>
+      <div class="category" onclick="openGallery('architecture')">
+        <img src="https://picsum.photos/id/1025/400/300" alt="Architecture">
+        <h2>Architecture</h2>
+      </div>
+      <div class="category" onclick="openGallery('animals')">
+        <img src="https://picsum.photos/id/237/400/300" alt="Animals">
+        <h2>Animals</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nature Gallery -->
+  <div id="nature" class="gallery-page">
+    <div class="gallery-header">
+      <h1> Nature Gallery </h1>
+      <a href="#" class="back-btn" onclick="goBack()">⬅ Back to Categories</a>
+    </div>
+    <div class="gallery">
+      <img src="https://picsum.photos/id/1015/800/600" alt="Nature">
+      <img src="https://picsum.photos/id/1016/800/600" alt="Nature">
+      <img src="https://picsum.photos/id/1018/800/600" alt="Nature">
+      <img src="https://picsum.photos/id/1020/800/600" alt="Nature">
+    </div>
+  </div>
+
+  <!-- Architecture Gallery -->
+  <div id="architecture" class="gallery-page">
+    <div class="gallery-header">
+      <h1> Architecture Gallery </h1>
+      <a href="#" class="back-btn" onclick="goBack()">⬅ Back to Categories</a>
+    </div>
+    <div class="gallery">
+      <img src="https://picsum.photos/id/1025/800/600" alt="Architecture">
+      <img src="https://picsum.photos/id/1031/800/600" alt="Architecture">
+      <img src="https://picsum.photos/id/1043/800/600" alt="Architecture">
+      <img src="https://picsum.photos/id/1050/800/600" alt="Architecture">
+    </div>
+  </div>
+
+  <!-- Animals Gallery -->
+  <div id="animals" class="gallery-page">
+    <div class="gallery-header">
+      <h1> Animals Gallery </h1>
+      <a href="#" class="back-btn" onclick="goBack()">⬅ Back to Categories</a>
+    </div>
+    <div class="gallery">
+      <img src="https://picsum.photos/id/237/800/600" alt="Animal">
+      <img src="https://picsum.photos/id/433/800/600" alt="Animal">
+      <img src="https://picsum.photos/id/593/800/600" alt="Animal">
+      <img src="https://picsum.photos/id/659/800/600" alt="Animal">
+    </div>
+  </div>
+
+  <!-- Modal for fullscreen view -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <img id="modal-img" src="">
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
